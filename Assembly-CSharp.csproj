@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B9601D78-82A0-3CC6-4F23-665467575EFC}</ProjectGuid>
+    <ProjectGuid>{2134A21A-7F0B-ED28-46C6-CE2D9B9BD1CD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,9 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AnimatorScript.cs" />
-    <Compile Include="Assets\AnimeGirlIdleAnimations_free\Script\AGIAFree_sample.cs" />
-    <None Include="Assets\Jeremy\Docs\MaleCharacterAnimation.txt" />
-    <None Include="Assets\AnimeGirlIdleAnimations_free\Readme.txt" />
+    <None Include="Assets\ManNeko_Assets\Adventurer Blake\Read Me.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -595,31 +593,31 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>B:/4th Year/Games Middleware/Animation/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>B:/4th Year/Games Middleware/Animation/GM_Animation/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>B:/4th Year/Games Middleware/Animation/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>B:/4th Year/Games Middleware/Animation/GM_Animation/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>B:/4th Year/Games Middleware/Animation/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>B:/4th Year/Games Middleware/Animation/GM_Animation/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>B:/4th Year/Games Middleware/Animation/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>B:/4th Year/Games Middleware/Animation/GM_Animation/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>B:/4th Year/Games Middleware/Animation/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>B:/4th Year/Games Middleware/Animation/GM_Animation/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>B:/4th Year/Games Middleware/Animation/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>B:/4th Year/Games Middleware/Animation/GM_Animation/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>B:/4th Year/Games Middleware/Animation/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>B:/4th Year/Games Middleware/Animation/GM_Animation/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>B:/4th Year/Games Middleware/Animation/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>B:/4th Year/Games Middleware/Animation/GM_Animation/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>B:/4th Year/Games Middleware/Animation/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>B:/4th Year/Games Middleware/Animation/GM_Animation/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

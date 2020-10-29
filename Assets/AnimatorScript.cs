@@ -15,18 +15,19 @@ public class AnimatorScript : MonoBehaviour
     void Update()
     {
         if(Input.GetKey(KeyCode.W))
-            model_animator.SetBool("isWalking", true);
+        {
+            model_animator.SetFloat("Hor_Y", 0.0f);
+            model_animator.SetFloat("Ver_X", 1.0f);
+        }
         else
-            model_animator.SetBool("isWalking", false);
+        {
+            model_animator.SetFloat("Hor_Y", 0.0f);
+            model_animator.SetFloat("Ver_X", 0.0f);
+        }
 
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
-            model_animator.SetBool("isRunning", true);
-        else
-            model_animator.SetBool("isRunning", false);
-
-       if (Input.GetKey(KeyCode.Space))
-            model_animator.SetBool("isJumping", true);
-        else
-            model_animator.SetBool("isJumping", false);
+        if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+        {
+            //model_animator.SetFloat("Hor_f",)
+        }
     }
 }

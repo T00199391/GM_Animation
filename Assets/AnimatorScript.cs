@@ -14,20 +14,39 @@ public class AnimatorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.W))
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            model_animator.SetFloat("Hor_Y", 0.0f);
-            model_animator.SetFloat("Ver_X", 1.0f);
+            model_animator.SetBool("isWalking", true);
         }
         else
         {
-            model_animator.SetFloat("Hor_Y", 0.0f);
-            model_animator.SetFloat("Ver_X", 0.0f);
+            model_animator.SetBool("isWalking", false);
         }
 
-        if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) && Input.GetKey(KeyCode.LeftShift))
         {
-            //model_animator.SetFloat("Hor_f",)
+            model_animator.SetBool("isRunning", true);
         }
+        else
+        {
+            model_animator.SetBool("isRunning", false);
+        }
+
+        if(Input.GetKey(KeyCode.Space))
+        {
+            model_animator.SetBool("isJumping", true);
+        }
+        else
+        {
+            model_animator.SetBool("isJumping", false);
+        }
+
+        Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+    }
+
+    public void Move(float x, float y)
+    {
+        model_animator.SetFloat("Ver_X",x);
+        model_animator.SetFloat("Hor_Y",y);
     }
 }

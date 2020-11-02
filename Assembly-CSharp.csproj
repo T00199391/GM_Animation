@@ -63,7 +63,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AnimatorScript.cs" />
+    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\AnimatorParentMoveFREE.cs" />
+    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\CameraControllerFREE.cs" />
+    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\GUIControlsFREE.cs" />
+    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\IKHandsFREE.cs" />
+    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\RPGCharacterAnimatorEventsFREE.cs" />
+    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\RPGCharacterControllerFREE.cs" />
+    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\RPGCharacterInputControllerFREE.cs" />
+    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\RPGCharacterMovementControllerFREE.cs" />
+    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\RPGCharacterWeaponControllerFREE.cs" />
+    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\SetupInputTagsFREE.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\Gravity.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\PlayerCamera.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\PlayerInputController.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\PlayerMachine.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\PlayerMachineDebug.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\SimpleStateMachine.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BSPTree.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BruteForceMesh.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\RPGController\RPGMesh.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\RPGController\RPGTriangleTree.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCharacterController.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCollider.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCollisionType.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperMath.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperStateMachine.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\DebugDraw.cs" />
+    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Math3d.cs" />
     <None Include="Assets\ManNeko_Assets\Adventurer Blake\Read Me.txt" />
+    <None Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\README.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

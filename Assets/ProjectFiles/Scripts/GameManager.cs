@@ -1,11 +1,15 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static List<GameObject> weapons = new List<GameObject>();
     public static bool ikActive { get; set; }
+    //public static GameObject prefab;
+    private static int numWeapons = 0;
 
     void Update()
     {
@@ -35,5 +39,14 @@ public class GameManager : MonoBehaviour
         }
 
         return weapon;
+    }
+
+    public static void SpawnObject(GameObject prefab)
+    {
+        if (Input.GetKeyDown(KeyCode.O) && numWeapons == 0)
+        {
+            PhotonNetwork.Instantiate(Path.Combine("Photon", "Weapon"), new Vector3(0.02594393f, 0.017f, 1.089f), Quaternion.identity);
+            numWeapons++;
+        }
     }
 }

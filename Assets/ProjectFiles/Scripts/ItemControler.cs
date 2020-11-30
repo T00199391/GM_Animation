@@ -7,10 +7,9 @@ using UnityEngine;
 public class ItemControler : MonoBehaviour
 {
     protected Animator animator;
-    public GameObject head;
+    public GameObject hand;
     private GameObject lookObj = null;
     public GameObject prefab;
-    private int numWeapons = 0;
 
     void Start()
     {
@@ -20,11 +19,7 @@ public class ItemControler : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.O) && numWeapons == 0)
-        {
-            Instantiate(prefab, new Vector3(0.02594393f, 0.017f, 1.089f), Quaternion.identity);
-            numWeapons++;
-        }
+        GameManager.SpawnObject(prefab);
 
         lookObj = GameManager.DetermineObject(this.gameObject, 5);
 
@@ -57,17 +52,17 @@ public class ItemControler : MonoBehaviour
 
     private void PlaceItem()
     {
-        GameObject hat = GameManager.DetermineObject(this.gameObject, 0.3f);
+        GameObject weapon = GameManager.DetermineObject(this.gameObject, 0.3f);
 
-        if (hat != null)
+        if (weapon != null)
         {
             animator.SetLookAtWeight(0);
             GameManager.ikActive = false;
 
             if (!GameManager.ikActive)
             {
-                hat.transform.SetParent(head.transform);
-                hat.transform.position = head.transform.position;
+                weapon.transform.SetParent(hand.transform);
+                weapon.transform.position = hand.transform.position;
             }
         }
     }

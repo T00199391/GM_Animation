@@ -62,41 +62,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\AnimatorParentMoveFREE.cs" />
-    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\CameraControllerFREE.cs" />
-    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\GUIControlsFREE.cs" />
-    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\IKHandsFREE.cs" />
-    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\RPGCharacterAnimatorEventsFREE.cs" />
-    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\RPGCharacterControllerFREE.cs" />
-    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\RPGCharacterInputControllerFREE.cs" />
-    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\RPGCharacterMovementControllerFREE.cs" />
-    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\RPGCharacterWeaponControllerFREE.cs" />
-    <Compile Include="Assets\ExplosiveLLC\RPG Character Animation Pack FREE\Code\SetupInputTagsFREE.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\Gravity.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\PlayerCamera.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\PlayerInputController.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\PlayerMachine.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\PlayerMachineDebug.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\SimpleStateMachine.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BSPTree.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BruteForceMesh.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\RPGController\RPGMesh.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\RPGController\RPGTriangleTree.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCharacterController.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCollider.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCollisionType.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperMath.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperStateMachine.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\DebugDraw.cs" />
-    <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Math3d.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
-    <Compile Include="Assets\ProjectFiles\Scripts\AnimatorScript.cs" />
     <Compile Include="Assets\ProjectFiles\Scripts\GameManager.cs" />
     <Compile Include="Assets\ProjectFiles\Scripts\ItemControler.cs" />
     <Compile Include="Assets\ProjectFiles\Scripts\Launcher.cs" />
     <Compile Include="Assets\ProjectFiles\Scripts\Menu.cs" />
     <Compile Include="Assets\ProjectFiles\Scripts\MenuManager.cs" />
+    <Compile Include="Assets\ProjectFiles\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\ProjectFiles\Scripts\PlayerListItem.cs" />
+    <Compile Include="Assets\ProjectFiles\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\ProjectFiles\Scripts\RoomListItem.cs" />
+    <Compile Include="Assets\ProjectFiles\Scripts\RoomManager.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -123,7 +99,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
-    <None Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\README.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">

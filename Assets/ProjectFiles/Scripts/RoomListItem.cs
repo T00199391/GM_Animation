@@ -7,7 +7,7 @@ using UnityEngine;
 public class RoomListItem : MonoBehaviour
 {
     [SerializeField] TMP_Text text;
-    RoomInfo info;
+    public RoomInfo info;
 
     public void SetUp(RoomInfo _info)
     {
@@ -17,6 +17,6 @@ public class RoomListItem : MonoBehaviour
 
     public void OnClick()
     {
-        Launcher.Instance.JoinRoom(info); //Stopped at 8:20
+        Launcher.Instance.JoinRoom(info);
     }
 }

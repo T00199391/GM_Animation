@@ -119,7 +119,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4903511500298032575}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3510650708528593719}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3510650708528593719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84309ac1890c994397937bdbaa4f80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 1919576828653760559}
 --- !u!1 &6191284580410677482
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,103 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Photon.Pun;
+using UnityEngine.Windows.Speech;
+using System;
+using System.Linq;
+
+public class PlayerController : MonoBehaviour
+{
+    Animator model_animator;
+    float speed = 2f;
+    PhotonView PV;
+    private KeywordRecognizer keywordRecognizer;
+    private Dictionary<string, Action> actions = new Dictionary<string, Action>();
+
+    void Awake()
+    {
+        PV = GetComponent<PhotonView>();
+    }
+
+    void Start()
+    {
+        model_animator = GetComponent<Animator>();
+
+        if (!PV.IsMine)
+        {
+            Destroy(GetComponentInChildren<Camera>().gameObject);
+        }
+
+        actions.Add("jump", Jump);
+        keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
+        keywordRecognizer.OnPhraseRecognized += RecognizeSpeech;
+    }
+
+    void Update()
+    {
+        if (!PV.IsMine)
+            return;
+
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            model_animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            model_animator.SetBool("isWalking", false);
+        }
+
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) && Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 4f;
+            model_animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            speed = 2f;
+            model_animator.SetBool("isRunning", false);
+        }
+
+        if(Input.GetKey(KeyCode.Space))
+        {
+            model_animator.SetBool("isJumping", true);
+        }
+        else
+        {
+            model_animator.SetBool("isJumping", false);
+        }
+
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            model_animator.SetBool("isAttacking", true);
+        }
+        else
+        {
+            model_animator.SetBool("isAttacking", false);
+        }
+
+        Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+        
+    }
+
+    public void Move(float x, float y)
+    {
+        model_animator.SetFloat("Ver_X", x);
+        model_animator.SetFloat("Hor_Y", y);
+
+        transform.position += (Vector3.forward * speed) * y * Time.deltaTime;
+        transform.position += (Vector3.right * speed) * x * Time.deltaTime;
+    }
+
+    private void RecognizeSpeech(PhraseRecognizedEventArgs speech)
+    {
+        Debug.Log(speech.text);
+        actions[speech.text].Invoke();
+    }
+
+    private void Jump()
+    {
+        model_animator.SetBool("isJumping", true);
+    }
+}

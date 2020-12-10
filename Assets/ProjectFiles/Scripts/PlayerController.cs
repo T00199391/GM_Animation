@@ -11,8 +11,12 @@ public class PlayerController : MonoBehaviour
     Animator model_animator;
     float speed = 2f;
     PhotonView PV;
+
     private KeywordRecognizer keywordRecognizer;
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
+    public static bool jumped { get; set; }
+    public static bool picked { get; set; }
+    public static bool attacked { get; set; }
 
     void Awake()
     {
@@ -29,8 +33,12 @@ public class PlayerController : MonoBehaviour
         }
 
         actions.Add("jump", Jump);
+        actions.Add("attack", Attack);
+        actions.Add("pick up", PickUp);
+
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizeSpeech;
+        keywordRecognizer.Start();
     }
 
     void Update()
@@ -58,18 +66,20 @@ public class PlayerController : MonoBehaviour
             model_animator.SetBool("isRunning", false);
         }
 
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || jumped)
         {
             model_animator.SetBool("isJumping", true);
+            jumped = false;
         }
         else
         {
             model_animator.SetBool("isJumping", false);
         }
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) || attacked)
         {
             model_animator.SetBool("isAttacking", true);
+            attacked = false;
         }
         else
         {
@@ -77,8 +87,6 @@ public class PlayerController : MonoBehaviour
         }
 
         Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-
-        
     }
 
     public void Move(float x, float y)
@@ -92,12 +100,24 @@ public class PlayerController : MonoBehaviour
 
     private void RecognizeSpeech(PhraseRecognizedEventArgs speech)
     {
-        Debug.Log(speech.text);
         actions[speech.text].Invoke();
     }
 
     private void Jump()
     {
-        model_animator.SetBool("isJumping", true);
+        jumped = true;
+        Debug.Log("Jumped");
+    }
+
+    private void Attack()
+    {
+        attacked = true;
+        Debug.Log("Attacked");
+    }
+
+    private void PickUp()
+    {
+        picked = true;
+        Debug.Log("Picked up");
     }
 }

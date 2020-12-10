@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
 {
     public static List<GameObject> weapons = new List<GameObject>();
     public static bool ikActive { get; set; }
-    //public static GameObject prefab;
     private static int numWeapons = 0;
 
     void Update()

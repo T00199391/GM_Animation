@@ -23,10 +23,11 @@ public class ItemControler : MonoBehaviour
 
         lookObj = GameManager.DetermineObject(this.gameObject, 5);
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || PlayerController.picked)
         {
             OnAnimatorIK();
             PlaceItem();
+            PlayerController.picked = false;
         }
     }
 

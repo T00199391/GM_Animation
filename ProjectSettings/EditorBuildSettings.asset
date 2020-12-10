@@ -14,4 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AnimationScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: ccbcf4f41edb26e4a8c139ee34164f64,
+      type: 2}

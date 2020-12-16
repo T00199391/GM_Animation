@@ -17,9 +17,9 @@ public class GameManager : MonoBehaviour
 
     public static List<GameObject> WeaponsList()
     {
-        foreach (GameObject hat in GameObject.FindGameObjectsWithTag("Weapon"))
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Weapon"))
         {
-            weapons.Add(hat);
+            weapons.Add(obj);
         }
 
         return weapons;

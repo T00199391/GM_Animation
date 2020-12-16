@@ -106,18 +106,15 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         jumped = true;
-        Debug.Log("Jumped");
     }
 
     private void Attack()
     {
         attacked = true;
-        Debug.Log("Attacked");
     }
 
     private void PickUp()
     {
         picked = true;
-        Debug.Log("Picked up");
     }
 }
